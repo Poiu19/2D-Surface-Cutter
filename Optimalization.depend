@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1541423523 source:e:\cpp projects\optimalization\main.cpp
+	"headers.hpp"
+
+1540977233 e:\cpp projects\optimalization\step.h
+	<vector>
+
+1541400518 source:e:\cpp projects\optimalization\step.cpp
+	"headers.hpp"
+
+1540978286 e:\cpp projects\optimalization\step.cpp
+	<vector>
+	<iostream>
+
+1541403615 e:\cpp projects\optimalization\step.hpp
+	"headers.hpp"
+
+1541421167 e:\cpp projects\optimalization\headers.hpp
+	<iostream>
+	<vector>
+	"step.hpp"
+	"form.hpp"
+	"formcontroller.hpp"
+
+1541422169 e:\cpp projects\optimalization\form.hpp
+	"headers.hpp"
+
+1541422195 source:e:\cpp projects\optimalization\form.cpp
+	"headers.hpp"
+
+1541425155 e:\cpp projects\optimalization\formcontroller.hpp
+	"headers.hpp"
+
+1541425103 source:e:\cpp projects\optimalization\formcontroller.cpp
+	"headers.hpp"
+
