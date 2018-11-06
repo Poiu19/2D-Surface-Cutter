@@ -1,27 +1,27 @@
-#include "headers.hpp"
-using namespace std;
-
+#include <iostream>
+#include "form.hpp"
+#include "formcontroller.hpp"
+#include "formsorter.hpp"
+#include "sawconfig.hpp"
 int main()
 {
-    Step * a = (new Step());
-    Step * aa = (a->createChildStep());
-    Step * aaa = (aa->createChildStep());
-    Step * b = a->createChildStep();
-    Step * c = a->createChildStep();
-    cout << "[A] Step::" << a << endl;
-    delete a;
-    a = nullptr;
-    cout << "[A] Step::" << a << endl;
-    Form * form1 = new Form(100, 200, 1111);
-    FormSwapAble * form2 = new FormSwapAble(10, 20, 1011);
-    cout << "Form1: " << form1->getFormType() << ", " << form1->getSwapAbleStatus() << endl;
-    cout << "Form2: " << form2->getFormType() << ", " << form2->getSwapAbleStatus() << endl;
-    FormController controller;
+    SawConfig * saw = new SawConfig();
+    Form * form1 = new Form(200, 100, 1111);
+    FormSwapAble * form2 = new FormSwapAble(1000, 2000, 1011);
+    Form * form3 = new Form(100, 200, 1111);
     std::vector<Form*> forms;
     forms.push_back(form1);
     forms.push_back(form2);
+    forms.push_back(form3);
+    FormSetup controller;
     controller.setupAllForms(forms);
-    std::cout << "Form1 ID: " << form1->getID() << endl;
-    std::cout << "Form2 ID: " << form2->getID() << endl;
+    FormSorter sorter;
+    forms = sorter.sortBySizeLength(forms);
+    for (form : forms)
+    {
+        std::cout << "ID: " << form->getID() << ", size: " << form->getFormSize() << std::endl;
+        delete form;
+    }
+    std::cout << saw->getDoubleThickQuantion() << std::endl << saw->getEdgeQuantion() << std::endl << saw->getSawThick() << std::endl;
     return 0;
 }

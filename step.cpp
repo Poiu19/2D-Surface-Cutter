@@ -1,10 +1,9 @@
-#include "headers.hpp"
+#include "step.hpp"
 using namespace std;
 
 Step::Step(Step * parentStep)
 {
     this->setParentStep(parentStep);
-    cout << "Stworzono STEP pod adresem::" << this << ", parent address::" << parentStep << endl;
 }
 
 Step::~Step()
@@ -15,7 +14,6 @@ Step::~Step()
             delete childStep;
         childStep = nullptr;
     }
-    cout << "Usunieto STEP pod adresem::" << this << endl;
 }
 
 Step * Step::createChildStep()

@@ -1,36 +1,66 @@
 # depslib dependency file v1.0
-1541423523 source:e:\cpp projects\optimalization\main.cpp
-	"headers.hpp"
+1541512366 source:e:\cpp projects\optimalization\main.cpp
+	<iostream>
+	"form.hpp"
+	"formcontroller.hpp"
+	"formsorter.hpp"
+	"sawconfig.hpp"
 
 1540977233 e:\cpp projects\optimalization\step.h
 	<vector>
 
-1541400518 source:e:\cpp projects\optimalization\step.cpp
-	"headers.hpp"
+1541509149 source:e:\cpp projects\optimalization\step.cpp
+	"step.hpp"
 
 1540978286 e:\cpp projects\optimalization\step.cpp
 	<vector>
 	<iostream>
 
-1541403615 e:\cpp projects\optimalization\step.hpp
-	"headers.hpp"
-
-1541421167 e:\cpp projects\optimalization\headers.hpp
-	<iostream>
-	<vector>
-	"step.hpp"
+1541509781 e:\cpp projects\optimalization\step.hpp
+	<algorithm>
 	"form.hpp"
+	"surface.hpp"
+
+1541509740 e:\cpp projects\optimalization\headers.hpp
+
+1541509237 e:\cpp projects\optimalization\form.hpp
+	"headers.hpp"
+
+1541509018 source:e:\cpp projects\optimalization\form.cpp
+	"form.hpp"
+
+1541509753 e:\cpp projects\optimalization\formcontroller.hpp
+	<algorithm>
+	"form.hpp"
+
+1541509038 source:e:\cpp projects\optimalization\formcontroller.cpp
 	"formcontroller.hpp"
+	"form.hpp"
 
-1541422169 e:\cpp projects\optimalization\form.hpp
+1541509208 e:\cpp projects\optimalization\surface.hpp
+
+1541509160 source:e:\cpp projects\optimalization\surface.cpp
+	"surface.hpp"
+
+1541493510 e:\cpp projects\optimalization\stepsorter.hpp
 	"headers.hpp"
 
-1541422195 source:e:\cpp projects\optimalization\form.cpp
+1541490772 source:e:\cpp projects\optimalization\stepsorter.cpp
 	"headers.hpp"
 
-1541425155 e:\cpp projects\optimalization\formcontroller.hpp
-	"headers.hpp"
+1541509770 e:\cpp projects\optimalization\formsorter.hpp
+	<algorithm>
+	"form.hpp"
 
-1541425103 source:e:\cpp projects\optimalization\formcontroller.cpp
-	"headers.hpp"
+1541509202 source:e:\cpp projects\optimalization\formsorter.cpp
+	"formsorter.hpp"
+	"form.hpp"
+
+1541512037 source:e:\cpp projects\optimalization\sawconfig.cpp
+	<iostream>
+	<fstream>
+	<string.h>
+	"sawconfig.hpp"
+
+1541512466 e:\cpp projects\optimalization\sawconfig.hpp
 
