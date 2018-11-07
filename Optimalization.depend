@@ -57,11 +57,12 @@
 	"formsorter.hpp"
 	"form.hpp"
 
-1541584959 source:e:\cpp projects\optimalization\sawconfig.cpp
+1541592942 source:e:\cpp projects\optimalization\sawconfig.cpp
 	<iostream>
 	<fstream>
 	<string.h>
 	"sawconfig.hpp"
 
-1541585152 e:\cpp projects\optimalization\sawconfig.hpp
+1541592953 e:\cpp projects\optimalization\sawconfig.hpp
+	<string>
 

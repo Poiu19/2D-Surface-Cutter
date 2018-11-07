@@ -7,7 +7,7 @@ int SawConfig::doubleThickQuantion;
 int SawConfig::edgeQuantion;
 int SawConfig::sawThick;
 
-void SawConfig::loadParams()
+bool SawConfig::loadParams()
 {
     std::ifstream config;
     std::string line;
@@ -15,7 +15,7 @@ void SawConfig::loadParams()
     if(config.is_open() != true)
     {
         std::cout << "File error: sawconfig.cfg not found!" << std::endl;
-        return;
+        return false;
     }
     while(getline(config, line))
     {
@@ -26,20 +26,26 @@ void SawConfig::loadParams()
         char* property = new char[line.length()+1];
         int value;
         std::sscanf(convertedLine, "%[^=]=%d", property, &value);
-        std::string stringProperty = property;
-        std::string temp_str = "EDGE_QUANTION";
-        if (stringProperty == temp_str.c_str())
-            setEdgeQuantion(value);
-        else if (stringProperty == "DOUBLE_THICK_QUANTION")
-            setDoubleThickQuantion(value);
-        else if (stringProperty == "SAW_THICK")
-            setSawThick(value);
-
+        setProperty(property, value);
         delete [] convertedLine;
         delete [] property;
-        loaded = true;
     }
+    loaded = true;
     config.close();
+    return loaded;
+}
+
+bool SawConfig::setProperty(std::string property, int value)
+{
+    if (property == "EDGE_QUANTION")
+        setEdgeQuantion(value);
+    else if (property == "DOUBLE_THICK_QUANTION")
+        setDoubleThickQuantion(value);
+    else if (property == "SAW_THICK")
+        setSawThick(value);
+    else
+        return false;
+    return true;
 }
 
 int SawConfig::getEdgeQuantion()
