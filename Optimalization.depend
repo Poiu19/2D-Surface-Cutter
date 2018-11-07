@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1541512366 source:e:\cpp projects\optimalization\main.cpp
+1541585023 source:e:\cpp projects\optimalization\main.cpp
 	<iostream>
 	"form.hpp"
 	"formcontroller.hpp"
@@ -21,7 +21,8 @@
 	"form.hpp"
 	"surface.hpp"
 
-1541509740 e:\cpp projects\optimalization\headers.hpp
+1541584933 e:\cpp projects\optimalization\headers.hpp
+	"sawconfig.hpp"
 
 1541509237 e:\cpp projects\optimalization\form.hpp
 	"headers.hpp"
@@ -56,11 +57,11 @@
 	"formsorter.hpp"
 	"form.hpp"
 
-1541512037 source:e:\cpp projects\optimalization\sawconfig.cpp
+1541584959 source:e:\cpp projects\optimalization\sawconfig.cpp
 	<iostream>
 	<fstream>
 	<string.h>
 	"sawconfig.hpp"
 
-1541512466 e:\cpp projects\optimalization\sawconfig.hpp
+1541585152 e:\cpp projects\optimalization\sawconfig.hpp
 

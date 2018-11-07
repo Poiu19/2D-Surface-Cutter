@@ -2,17 +2,17 @@
 #define SAWCONFIG_HPP_INCLUDED
 
 class SawConfig {
-    protected: int edgeQuantion, doubleThickQuantion, sawThick;
+    protected: static bool loaded;
+    protected: static int edgeQuantion, doubleThickQuantion, sawThick;
 
-    public: SawConfig();
+    public: static void loadParams();
+    public: static int getEdgeQuantion();
+    public: static int getDoubleThickQuantion();
+    public: static int getSawThick();
 
-    public: int getEdgeQuantion();
-    public: int getDoubleThickQuantion();
-    public: int getSawThick();
-
-    public: SawConfig * setEdgeQuantion(int value);
-    public: SawConfig * setDoubleThickQuantion(int value);
-    public: SawConfig * setSawThick(int value);
+    public: static void setEdgeQuantion(int value);
+    public: static void setDoubleThickQuantion(int value);
+    public: static void setSawThick(int value);
 };
 
 

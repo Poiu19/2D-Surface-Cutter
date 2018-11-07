@@ -5,7 +5,6 @@
 #include "sawconfig.hpp"
 int main()
 {
-    SawConfig * saw = new SawConfig();
     Form * form1 = new Form(200, 100, 1111);
     FormSwapAble * form2 = new FormSwapAble(1000, 2000, 1011);
     Form * form3 = new Form(100, 200, 1111);
@@ -22,6 +21,6 @@ int main()
         std::cout << "ID: " << form->getID() << ", size: " << form->getFormSize() << std::endl;
         delete form;
     }
-    std::cout << saw->getDoubleThickQuantion() << std::endl << saw->getEdgeQuantion() << std::endl << saw->getSawThick() << std::endl;
+    std::cout << SawConfig::getDoubleThickQuantion() << std::endl << SawConfig::getEdgeQuantion() << std::endl << SawConfig::getSawThick() << std::endl;
     return 0;
 }

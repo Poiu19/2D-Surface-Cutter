@@ -2,11 +2,16 @@
 #include <fstream>
 #include <string.h>
 #include "sawconfig.hpp"
-SawConfig::SawConfig()
+bool SawConfig::loaded = false;
+int SawConfig::doubleThickQuantion;
+int SawConfig::edgeQuantion;
+int SawConfig::sawThick;
+
+void SawConfig::loadParams()
 {
     std::ifstream config;
     std::string line;
-    config.open("sawconfig.cfg");
+    config.open("./sawconfig.cfg");
     if(config.is_open() != true)
     {
         std::cout << "File error: sawconfig.cfg not found!" << std::endl;
@@ -24,45 +29,49 @@ SawConfig::SawConfig()
         std::string stringProperty = property;
         std::string temp_str = "EDGE_QUANTION";
         if (stringProperty == temp_str.c_str())
-            this->setEdgeQuantion(value);
+            setEdgeQuantion(value);
         else if (stringProperty == "DOUBLE_THICK_QUANTION")
-            this->setDoubleThickQuantion(value);
+            setDoubleThickQuantion(value);
         else if (stringProperty == "SAW_THICK")
-            this->setSawThick(value);
+            setSawThick(value);
 
         delete [] convertedLine;
         delete [] property;
+        loaded = true;
     }
     config.close();
 }
 
 int SawConfig::getEdgeQuantion()
 {
-    return this->edgeQuantion;
+    if(!loaded)
+        loadParams();
+    return edgeQuantion;
 }
 int SawConfig::getDoubleThickQuantion()
 {
-    return this->doubleThickQuantion;
+    if(!loaded)
+        loadParams();
+    return doubleThickQuantion;
 }
 int SawConfig::getSawThick()
 {
-    return this->sawThick;
+    if(!loaded)
+        loadParams();
+    return sawThick;
 }
 
-SawConfig* SawConfig::setEdgeQuantion(int value)
+void SawConfig::setEdgeQuantion(int value)
 {
-    this->edgeQuantion = value;
-    return this;
+    edgeQuantion = value;
 }
 
-SawConfig* SawConfig::setDoubleThickQuantion(int value)
+void SawConfig::setDoubleThickQuantion(int value)
 {
-    this->doubleThickQuantion = value;
-    return this;
+    doubleThickQuantion = value;
 }
 
-SawConfig* SawConfig::setSawThick(int value)
+void SawConfig::setSawThick(int value)
 {
-    this->sawThick = value;
-    return this;
+    sawThick = value;
 }
