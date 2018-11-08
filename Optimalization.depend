@@ -1,10 +1,12 @@
 # depslib dependency file v1.0
-1541675074 source:e:\cpp projects\optimalization\main.cpp
+1541682982 source:e:\cpp projects\optimalization\main.cpp
 	<iostream>
+	<memory>
 	"form.hpp"
 	"formcontroller.hpp"
 	"formsorter.hpp"
 	"sawconfig.hpp"
+	"generalconverters.hpp"
 
 1540977233 e:\cpp projects\optimalization\step.h
 	<vector>
@@ -24,10 +26,11 @@
 1541584933 e:\cpp projects\optimalization\headers.hpp
 	"sawconfig.hpp"
 
-1541509237 e:\cpp projects\optimalization\form.hpp
+1541679134 e:\cpp projects\optimalization\form.hpp
 	"headers.hpp"
+	"generalconverters.hpp"
 
-1541509018 source:e:\cpp projects\optimalization\form.cpp
+1541677624 source:e:\cpp projects\optimalization\form.cpp
 	"form.hpp"
 
 1541675161 e:\cpp projects\optimalization\formcontroller.hpp
@@ -65,4 +68,10 @@
 
 1541592953 e:\cpp projects\optimalization\sawconfig.hpp
 	<string>
+
+1541679032 e:\cpp projects\optimalization\generalconverters.hpp
+	<string>
+
+1541678890 source:e:\cpp projects\optimalization\generalconverters.cpp
+	"generalconverters.hpp"
 

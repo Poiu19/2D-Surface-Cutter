@@ -1,6 +1,6 @@
 #include "form.hpp"
 
-Form::Form(unsigned short int length, unsigned short int width, unsigned short int bordering)
+Form::Form(unsigned short int length, unsigned short int width, char * bordering)
 {
     this->setLength(length)->setWidth(width)->setBordering(bordering)->setSwapAbleStatus(false)->setType(FORM_STANDARD);
 }
@@ -23,7 +23,7 @@ Form * Form::setWidth(unsigned short int width)
     return this;
 }
 
-Form * Form::setBordering(unsigned short int bordering)
+Form * Form::setBordering(char * bordering)
 {
     this->bordering = bordering;
     return this;
@@ -61,7 +61,7 @@ unsigned short int Form::getWidth()
     return this->width;
 }
 
-unsigned short int Form::getBordering()
+char * Form::getBordering()
 {
     return this->bordering;
 }
@@ -81,7 +81,7 @@ Form_Type Form::getFormType()
     return this->type;
 }
 
-FormSwapAble::FormSwapAble(unsigned short int length, unsigned short int width, unsigned short int bordering)
+FormSwapAble::FormSwapAble(unsigned short int length, unsigned short int width, char * bordering)
     : Form(length, width, bordering)
 {
     this->setSwapAbleStatus(true)->setType(FORM_SWAPABLE);

@@ -38,6 +38,8 @@
 		<Unit filename="formcontroller.hpp" />
 		<Unit filename="formsorter.cpp" />
 		<Unit filename="formsorter.hpp" />
+		<Unit filename="generalconverters.cpp" />
+		<Unit filename="generalconverters.hpp" />
 		<Unit filename="headers.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="sawconfig.cfg" />

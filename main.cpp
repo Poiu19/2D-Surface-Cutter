@@ -1,13 +1,16 @@
 #include <iostream>
+#include <memory>
 #include "form.hpp"
 #include "formcontroller.hpp"
 #include "formsorter.hpp"
 #include "sawconfig.hpp"
+#include "generalconverters.hpp"
+
 int main()
 {
-    Form * form1 = new Form(200, 100, 1111);
-    FormSwapAble * form2 = new FormSwapAble(1000, 2000, 1011);
-    Form * form3 = new Form(100, 200, 1111);
+    Form * form1 = new Form(200, 100, StringConverter::strToChar("1111"));
+    FormSwapAble * form2 = new FormSwapAble(1000, 2000, StringConverter::strToChar("1111"));
+    Form * form3 = new Form(100, 200, StringConverter::strToChar("1111"));
     std::vector<Form*> forms;
     forms.push_back(form1);
     forms.push_back(form2);
