@@ -13,8 +13,7 @@ int main()
     forms.push_back(form2);
     forms.push_back(form3);
     FormSetup::setupAllForms(forms);
-    FormSorter sorter;
-    forms = sorter.sortBySizeLength(forms);
+    forms = FormSorter::sortBySizeLength(forms);
     for (form : forms)
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getFormSize() << std::endl;
