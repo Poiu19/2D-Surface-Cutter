@@ -12,8 +12,7 @@ int main()
     forms.push_back(form1);
     forms.push_back(form2);
     forms.push_back(form3);
-    FormSetup controller;
-    controller.setupAllForms(forms);
+    FormSetup::setupAllForms(forms);
     FormSorter sorter;
     forms = sorter.sortBySizeLength(forms);
     for (form : forms)

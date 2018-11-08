@@ -1,8 +1,8 @@
 #include "formcontroller.hpp"
 #include "form.hpp"
-Form * FormSetup::setSize(Form * form)
+void FormSetup::setSize(Form * form)
 {
-    return form->setFormSize(this->getLengthInMeters(form) * this->getWidthInMeters(form));
+    form->setFormSize(getLengthInMeters(form) * getWidthInMeters(form));
 }
 
 float FormSetup::getLengthInMeters(Form * form)
@@ -15,26 +15,25 @@ float FormSetup::getWidthInMeters(Form * form)
     return (float)form->getWidth()/1000;
 }
 
-Form * FormSetup::setID(Form * form, unsigned int ID)
+void FormSetup::setID(Form * form, unsigned int ID)
 {
     form->setID(ID);
-    return form;
 }
 
 void FormSetup::setIDToAll(std::vector<Form*> Forms, unsigned int startID)
 {
     for(form : Forms)
-        this->setID(form, startID++);
+        setID(form, startID++);
 }
 
 void FormSetup::setSizeToAll(std::vector<Form*> Forms)
 {
     for(form : Forms)
-        this->setSize(form);
+        setSize(form);
 }
 
 void FormSetup::setupAllForms(std::vector<Form*> Forms)
 {
-    this->setIDToAll(Forms);
-    this->setSizeToAll(Forms);
+    setIDToAll(Forms);
+    setSizeToAll(Forms);
 }
