@@ -1,8 +1,8 @@
 #ifndef STEP_HPP_INCLUDED
 #define STEP_HPP_INCLUDED
 #include <algorithm>
-#include "form.hpp"
-#include "surface.hpp"
+#include "form/form.hpp"
+#include "form/surface.hpp"
 class Step {
     protected: Step * parentStep;
     protected: std::vector<Step*> childSteps;

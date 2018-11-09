@@ -12,7 +12,9 @@ bool SawConfig::loadParams()
     std::ifstream config;
     std::string line;
     config.open("./sawconfig.cfg");
-    if(config.is_open() != true)
+    if(!config.is_open()) //only for development mode
+        config.open("./sources/saw/sawconfig.cfg");
+    if(!config.is_open())
     {
         std::cout << "File error: sawconfig.cfg not found!" << std::endl;
         return false;

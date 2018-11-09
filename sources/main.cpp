@@ -1,9 +1,9 @@
 #include <iostream>
 #include <memory>
-#include "form.hpp"
-#include "formcontroller.hpp"
-#include "formsorter.hpp"
-#include "sawconfig.hpp"
+#include "form/form.hpp"
+#include "form/formsetup.hpp"
+#include "form/formsorter.hpp"
+#include "saw/sawconfig.hpp"
 #include "generalconverters.hpp"
 
 int main()
@@ -19,7 +19,7 @@ int main()
     forms = FormSorter::sortBySizeLength(forms);
     for (form : forms)
     {
-        std::cout << "ID: " << form->getID() << ", size: " << form->getFormSize() << std::endl;
+        std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << std::endl;
         delete form;
     }
     std::cout << SawConfig::getDoubleThickQuantion() << std::endl << SawConfig::getEdgeQuantion() << std::endl << SawConfig::getSawThick() << std::endl;

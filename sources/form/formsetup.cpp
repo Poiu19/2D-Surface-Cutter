@@ -1,8 +1,8 @@
-#include "formcontroller.hpp"
+#include "formsetup.hpp"
 #include "form.hpp"
 void FormSetup::setSize(Form * form)
 {
-    form->setFormSize(getLengthInMeters(form) * getWidthInMeters(form));
+    form->setSizeArea(getLengthInMeters(form) * getWidthInMeters(form));
 }
 
 float FormSetup::getLengthInMeters(Form * form)
