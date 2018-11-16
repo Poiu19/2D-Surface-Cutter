@@ -4,8 +4,6 @@
 #include "../position.hpp"
 
 class Surface : public Dimension, public Position {
-    protected: unsigned short int x, y;
-
     public: Surface(unsigned short int x, unsigned short int y, unsigned short int length, unsigned short int width);
 };
 

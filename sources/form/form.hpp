@@ -14,15 +14,11 @@ class Form : public Dimension {
 
     //setters
     public: void setID(unsigned int ID);
-    public: void setLength(unsigned short int length);
-    public: void setWidth(unsigned short int width);
     public: void setBordering(char * bordering);
     public: void setSwapAbleStatus(bool status);
     public: void setType(Form_Type type);
     //getters
     public: unsigned int getID();
-    public: unsigned short int getLength();
-    public: unsigned short int getWidth();
     public: char * getBordering();
     public: bool getSwapAbleStatus();
     public: Form_Type getFormType();

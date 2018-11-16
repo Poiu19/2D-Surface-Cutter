@@ -23,3 +23,13 @@ float Dimension::getSizeArea()
 {
     return this->sizeArea;
 }
+
+ unsigned short int Dimension::getLength()
+ {
+     return this->length;
+ }
+
+unsigned short int Dimension::getWidth()
+{
+    return this->width;
+}

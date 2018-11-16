@@ -11,6 +11,8 @@ class Dimension{
     public: void setWidth(unsigned short int width);
     public: void setSizeArea(float sizeArea);
     public: float getSizeArea();
+    public: unsigned short int getLength();
+    public: unsigned short int getWidth();
 
 };
 

@@ -13,16 +13,6 @@ void Form::setID(unsigned int ID)
     this->ID = ID;
 }
 
-void Form::setLength(unsigned short int length)
-{
-    this->length = length;
-}
-
-void Form::setWidth(unsigned short int width)
-{
-    this->width = width;
-}
-
 void Form::setBordering(char * bordering)
 {
     this->bordering = bordering;
@@ -40,16 +30,6 @@ void Form::setType(Form_Type type)
 unsigned int Form::getID()
 {
     return this->ID;
-}
-
-unsigned short int Form::getLength()
-{
-    return this->length;
-}
-
-unsigned short int Form::getWidth()
-{
-    return this->width;
 }
 
 char * Form::getBordering()
