@@ -3,10 +3,15 @@
 #include <algorithm>
 #include "form.hpp"
 class FormSorter {
-    public: static std::vector<Form*> sortBySizeLength(std::vector<Form*> forms);
-    public: static std::vector<Form*> sortBySizeWidth(std::vector<Form*> forms);
-    public: static std::vector<Form*> sortByLengthWidth(std::vector<Form*> forms);
-    public: static std::vector<Form*> sortByWidthLength(std::vector<Form*> forms);
+    public: static void sortBySizeLength(std::vector<Form*> & forms);
+    public: static void sortBySizeWidth(std::vector<Form*> & forms);
+    public: static void sortByLengthWidth(std::vector<Form*> & forms);
+    public: static void sortByWidthLength(std::vector<Form*> & forms);
+};
+
+class FormPointerCopier {
+    public: static std::vector<Form*> copyForms(std::vector<Form*> forms);
+    public: static Form* copyForm(Form* form);
 };
 
 #endif // STEPSORTER_HPP_INCLUDED

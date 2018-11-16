@@ -25,28 +25,28 @@ int main()
     forms.push_back(form7);
     FormSetup::setupAllForms(forms);
     //typedef FormSorter<Form*>::sortBySizeLength(forms);
-    forms = FormSorter::sortBySizeLength(forms);
+    FormSorter::sortBySizeLength(forms);
     std::cout << "Sortowanie SizeLength" << std::endl;
     for (form : forms)
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
         //delete form;
     }
-    forms = FormSorter::sortBySizeWidth(forms);
+    FormSorter::sortBySizeWidth(forms);
     std::cout << "Sortowanie SizeWidth" << std::endl;
     for (form : forms)
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
        // delete form;
     }
-    forms = FormSorter::sortByLengthWidth(forms);
+    FormSorter::sortByLengthWidth(forms);
     std::cout << "Sortowanie LengthWidth" << std::endl;
     for (form : forms)
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
         //delete form;
     }
-    forms = FormSorter::sortByWidthLength(forms);
+    FormSorter::sortByWidthLength(forms);
     std::cout << "Sortowanie WidthLength" << std::endl;
     for (form : forms)
     {
