@@ -93,11 +93,11 @@
 	<algorithm>
 	"form.hpp"
 
-1542378558 source:e:\cpp projects\optimalization\sources\form\formsorter.cpp
+1542379590 source:e:\cpp projects\optimalization\sources\form\formsorter.cpp
 	"formsorter.hpp"
 	"form.hpp"
 
-1542378873 e:\cpp projects\optimalization\sources\form\formsorter.hpp
+1542379619 e:\cpp projects\optimalization\sources\form\formsorter.hpp
 	<algorithm>
 	"form.hpp"
 
@@ -126,7 +126,7 @@
 1541757137 e:\cpp projects\optimalization\sources\headers.hpp
 	"saw/sawconfig.hpp"
 
-1542378190 source:e:\cpp projects\optimalization\sources\main.cpp
+1542379608 source:e:\cpp projects\optimalization\sources\main.cpp
 	<iostream>
 	<memory>
 	"form/form.hpp"
