@@ -1,5 +1,5 @@
-#include "generalconverters.hpp"
-
+#include <string>
+#include "form/form.hpp"
 char * StringConverter::strToChar(std::string str)
 {
     return (char*)str.c_str();
@@ -17,4 +17,16 @@ int StringConverter::strToInt(std::string str, Round_Type type)
     else if(type == ROUND_UP)
         return ceil(strToFloat(str));
     return round(strToFloat(str));
+}
+
+std::string EdgeBandingConverter::bandingToString(EdgeBanding * banding)
+{
+    std::string unitedEdgeBanding(banding->getCharFormat(), 4);
+    return unitedEdgeBanding;
+}
+
+std::string EdgeBandingConverter::bandingToString(char * banding)
+{
+    std::string unitedEdgeBanding(banding, 4);
+    return unitedEdgeBanding;
 }

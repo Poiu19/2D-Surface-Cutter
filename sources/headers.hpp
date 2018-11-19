@@ -12,4 +12,11 @@ enum Round_Type{
     ROUND_UP
 };
 
+enum Edge{
+    EDGE_LEFT,
+    EDGE_RIGHT,
+    EDGE_TOP,
+    EDGE_BOTTOM
+};
+
 #endif // HEADERS_HPP_INCLUDED

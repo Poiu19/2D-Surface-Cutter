@@ -77,12 +77,14 @@
 1541750608 source:e:\cpp projects\optimalization\generalconverters.cpp
 	"generalconverters.hpp"
 
-1542373350 source:e:\cpp projects\optimalization\sources\form\form.cpp
+1542628142 source:e:\cpp projects\optimalization\sources\form\form.cpp
+	<iostream>
 	"form.hpp"
 
-1542373244 e:\cpp projects\optimalization\sources\form\form.hpp
-	"../headers.hpp"
+1542628112 e:\cpp projects\optimalization\sources\form\form.hpp
+	"edgebanding.hpp"
 	"../generalconverters.hpp"
+	"../headers.hpp"
 	"../dimension.hpp"
 
 1541762255 source:e:\cpp projects\optimalization\sources\form\formsetup.cpp
@@ -93,13 +95,14 @@
 	<algorithm>
 	"form.hpp"
 
-1542379590 source:e:\cpp projects\optimalization\sources\form\formsorter.cpp
+1542627294 source:e:\cpp projects\optimalization\sources\form\formsorter.cpp
 	"formsorter.hpp"
 	"form.hpp"
 
-1542379619 e:\cpp projects\optimalization\sources\form\formsorter.hpp
+1542626338 e:\cpp projects\optimalization\sources\form\formsorter.hpp
 	<algorithm>
 	"form.hpp"
+	"surface.hpp"
 
 1541756697 source:e:\cpp projects\optimalization\sources\saw\sawconfig.cpp
 	<iostream>
@@ -115,18 +118,21 @@
 
 1541751618 e:\cpp projects\optimalization\sources\surface.hpp
 
-1541750608 source:e:\cpp projects\optimalization\sources\generalconverters.cpp
-	"generalconverters.hpp"
+1542621999 source:e:\cpp projects\optimalization\sources\generalconverters.cpp
+	<string>
+	"form/form.hpp"
 
-1541749585 e:\cpp projects\optimalization\sources\generalconverters.hpp
+1542628290 e:\cpp projects\optimalization\sources\generalconverters.hpp
 	<string>
 	<math.h>
 	"headers.hpp"
+	"form/form.hpp"
+	"form/edgebanding.hpp"
 
-1541757137 e:\cpp projects\optimalization\sources\headers.hpp
+1542622285 e:\cpp projects\optimalization\sources\headers.hpp
 	"saw/sawconfig.hpp"
 
-1542379608 source:e:\cpp projects\optimalization\sources\main.cpp
+1542627184 source:e:\cpp projects\optimalization\sources\main.cpp
 	<iostream>
 	<memory>
 	"form/form.hpp"
@@ -159,4 +165,10 @@
 
 1541764349 source:e:\cpp projects\optimalization\sources\position.cpp
 	"position.hpp"
+
+1542622346 source:e:\cpp projects\optimalization\sources\form\edgebanding.cpp
+	"edgebanding.hpp"
+	"../headers.hpp"
+
+1542622018 e:\cpp projects\optimalization\sources\form\edgebanding.hpp
 

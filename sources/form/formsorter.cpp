@@ -36,6 +36,15 @@ void FormSorter::sortByWidthLength(std::vector<Form*> & forms) //same as sortByW
                 std::swap(forms[i], forms[i+1]);
 }
 
+void SurfaceSorter::sortByLengthWidthAsc(std::vector<Surface*> & surfaces)
+{
+    for(unsigned int j = 0; j < surfaces.size()-1; j++)
+        for(unsigned int i = 0; i < surfaces.size()-1; i++)
+            if ( (surfaces[i]->getLength() > surfaces[i+1]->getLength()) ||
+                 (surfaces[i]->getLength() == surfaces[i+1]->getLength() && surfaces[i]->getWidth() > surfaces[i+1]->getWidth()) )
+                 std::swap(surfaces[i], surfaces[i+1]);
+}
+
 std::vector<Form*> FormPointerCopier::copyForms(std::vector<Form*> forms)
 {
     return forms;
