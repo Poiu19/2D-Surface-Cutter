@@ -37,6 +37,9 @@
 		</Compiler>
 		<Unit filename="sources/dimension.cpp" />
 		<Unit filename="sources/dimension.hpp" />
+		<Unit filename="sources/form/defaultsurface.hpp" />
+		<Unit filename="sources/form/edgebanding.cpp" />
+		<Unit filename="sources/form/edgebanding.hpp" />
 		<Unit filename="sources/form/form.cpp" />
 		<Unit filename="sources/form/form.hpp" />
 		<Unit filename="sources/form/formsetup.cpp" />

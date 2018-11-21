@@ -3,6 +3,7 @@
 #include <algorithm>
 #include "form/form.hpp"
 #include "form/surface.hpp"
+
 class Step {
     protected: Step * parentStep;
     protected: std::vector<Step*> childSteps;
@@ -13,7 +14,7 @@ class Step {
     public: Step(Step * parentStep = nullptr);
     public: ~Step();
     //creators
-    public: Step * createChildStep();
+    public: Step * setChildStep();
 
     //setters
     public: Step * setParentStep(Step * step);

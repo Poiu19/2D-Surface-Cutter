@@ -1,4 +1,3 @@
-#include <iostream>
 #include "form.hpp"
 Form::Form(unsigned short int length, unsigned short int width, char * banding)
     : Dimension(length, width), EdgeBanding(banding)
@@ -17,7 +16,7 @@ void Form::setSwapAbleStatus(bool status)
     this->swapAble = status;
 }
 
-void Form::setType(Form_Type type)
+void Form::setType(FormType type)
 {
     this->type = type;
 }
@@ -31,7 +30,7 @@ bool Form::getSwapAbleStatus()
     return this->swapAble;
 }
 
-Form_Type Form::getFormType()
+FormType Form::getFormType()
 {
     return this->type;
 }

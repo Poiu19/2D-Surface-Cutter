@@ -24,7 +24,7 @@ int main()
     forms.push_back(form6);
     forms.push_back(form7);
     FormSetup::setupAllForms(forms);
-    FormSorter::sortBySizeLength(forms);
+    Sorter::sortBySizeLength(forms);
     std::vector<Surface*> surfaces;
     Surface * surface1 = new Surface(0, 0, 200, 400);
     Surface * surface2 = new Surface(1, 2, 200, 300);
@@ -43,30 +43,31 @@ int main()
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
     }
-    FormSorter::sortBySizeWidth(forms);
+    Sorter::sortBySizeWidth(forms);
     std::cout << "Sortowanie SizeWidth" << std::endl;
     for (form : forms)
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
     }
-    FormSorter::sortByLengthWidth(forms);
+    Sorter::sortByLengthWidth(forms);
     std::cout << "Sortowanie LengthWidth" << std::endl;
     for (form : forms)
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
     }
-    FormSorter::sortByWidthLength(forms);
+    Sorter::sortByWidthLength(forms);
     std::cout << "Sortowanie WidthLength" << std::endl;
     for (form : forms)
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
         delete form;
     }
-    SurfaceSorter::sortByLengthWidthAsc(surfaces);
+    Sorter::sortByLengthWidth(surfaces);
     for (surface : surfaces)
     {
         std::cout << "X: " << surface->getPosX() << ", Y: " << surface->getPosY() << ", LENGTH: " << surface->getLength() << ", WIDTH: " << surface->getWidth() << std::endl;
     }
     std::cout << SawConfig::getDoubleThickQuantion() << std::endl << SawConfig::getEdgeQuantion() << std::endl << SawConfig::getSawThick() << std::endl;
+    std::cout << FlagDecryptor::getFlagQueuePlace(FLAG_NOTSWAPED) << " - " << FlagDecryptor::isStepFlagAssigned(FLAG_NOTSWAPED, 13) << std::endl;
     return 0;
 }

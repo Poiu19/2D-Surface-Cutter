@@ -5,6 +5,11 @@
 
 class Surface : public Dimension, public Position {
     public: Surface(unsigned short int x, unsigned short int y, unsigned short int length, unsigned short int width);
+
+    public: bool isSurface()
+    {
+        return true;
+    }
 };
 
 #endif // SURFACE_HPP_INCLUDED

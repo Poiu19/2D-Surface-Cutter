@@ -77,15 +77,14 @@
 1541750608 source:e:\cpp projects\optimalization\generalconverters.cpp
 	"generalconverters.hpp"
 
-1542628142 source:e:\cpp projects\optimalization\sources\form\form.cpp
-	<iostream>
+1542794971 source:e:\cpp projects\optimalization\sources\form\form.cpp
 	"form.hpp"
 
-1542628112 e:\cpp projects\optimalization\sources\form\form.hpp
-	"edgebanding.hpp"
+1542795028 e:\cpp projects\optimalization\sources\form\form.hpp
 	"../generalconverters.hpp"
-	"../headers.hpp"
+	"edgebanding.hpp"
 	"../dimension.hpp"
+	"../headers.hpp"
 
 1541762255 source:e:\cpp projects\optimalization\sources\form\formsetup.cpp
 	"formsetup.hpp"
@@ -95,11 +94,11 @@
 	<algorithm>
 	"form.hpp"
 
-1542627294 source:e:\cpp projects\optimalization\sources\form\formsorter.cpp
+1542789950 source:e:\cpp projects\optimalization\sources\form\formsorter.cpp
 	"formsorter.hpp"
 	"form.hpp"
 
-1542626338 e:\cpp projects\optimalization\sources\form\formsorter.hpp
+1542793607 e:\cpp projects\optimalization\sources\form\formsorter.hpp
 	<algorithm>
 	"form.hpp"
 	"surface.hpp"
@@ -118,21 +117,19 @@
 
 1541751618 e:\cpp projects\optimalization\sources\surface.hpp
 
-1542621999 source:e:\cpp projects\optimalization\sources\generalconverters.cpp
+1542703853 source:e:\cpp projects\optimalization\sources\generalconverters.cpp
 	<string>
 	"form/form.hpp"
 
-1542628290 e:\cpp projects\optimalization\sources\generalconverters.hpp
+1542795059 e:\cpp projects\optimalization\sources\generalconverters.hpp
 	<string>
 	<math.h>
 	"headers.hpp"
-	"form/form.hpp"
 	"form/edgebanding.hpp"
 
-1542622285 e:\cpp projects\optimalization\sources\headers.hpp
-	"saw/sawconfig.hpp"
+1542794770 e:\cpp projects\optimalization\sources\headers.hpp
 
-1542627184 source:e:\cpp projects\optimalization\sources\main.cpp
+1542788452 source:e:\cpp projects\optimalization\sources\main.cpp
 	<iostream>
 	<memory>
 	"form/form.hpp"
@@ -141,10 +138,10 @@
 	"saw/sawconfig.hpp"
 	"generalconverters.hpp"
 
-1541509149 source:e:\cpp projects\optimalization\sources\step.cpp
+1542794372 source:e:\cpp projects\optimalization\sources\step.cpp
 	"step.hpp"
 
-1541762040 e:\cpp projects\optimalization\sources\step.hpp
+1542794353 e:\cpp projects\optimalization\sources\step.hpp
 	<algorithm>
 	"form/form.hpp"
 	"form/surface.hpp"
@@ -152,12 +149,12 @@
 1542373311 source:e:\cpp projects\optimalization\sources\dimension.cpp
 	"dimension.hpp"
 
-1542373274 e:\cpp projects\optimalization\sources\dimension.hpp
+1542787574 e:\cpp projects\optimalization\sources\dimension.hpp
 
-1541764408 source:e:\cpp projects\optimalization\sources\form\surface.cpp
+1542716687 source:e:\cpp projects\optimalization\sources\form\surface.cpp
 	"surface.hpp"
 
-1542373435 e:\cpp projects\optimalization\sources\form\surface.hpp
+1542782559 e:\cpp projects\optimalization\sources\form\surface.hpp
 	"../dimension.hpp"
 	"../position.hpp"
 
@@ -171,4 +168,8 @@
 	"../headers.hpp"
 
 1542622018 e:\cpp projects\optimalization\sources\form\edgebanding.hpp
+
+1542718312 e:\cpp projects\optimalization\sources\form\defaultsurface.hpp
+
+1542782399 e:\cpp projects\optimalization\sources\form\surfaceholder.hpp
 

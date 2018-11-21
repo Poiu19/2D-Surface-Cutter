@@ -13,7 +13,6 @@ class Dimension{
     public: float getSizeArea();
     public: unsigned short int getLength();
     public: unsigned short int getWidth();
-
 };
 
 #endif // DIMENSION_HPP_INCLUDED

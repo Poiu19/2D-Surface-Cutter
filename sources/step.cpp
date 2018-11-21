@@ -16,7 +16,7 @@ Step::~Step()
     }
 }
 
-Step * Step::createChildStep()
+Step * Step::setChildStep()
 {
     this->childSteps.push_back(new Step(this));
     return this->childSteps.back();
