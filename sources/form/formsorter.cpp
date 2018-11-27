@@ -1,40 +1,40 @@
 #include "formsorter.hpp"
 #include "form.hpp"
-void Sorter::sortBySizeLength(std::vector<Form*> & forms)
+void Sorter::sortBySizeLength(std::vector<std::shared_ptr<Form> > & forms)
 {
     FormSorter::sortBySizeLengthDesc(forms);
 }
-void Sorter::sortBySizeLength(std::vector<Surface*> & surfaces)
+void Sorter::sortBySizeLength(std::vector<std::shared_ptr<Surface> > & surfaces)
 {
     SurfaceSorter::sortBySizeLengthAsc(surfaces);
 }
-void Sorter::sortBySizeWidth(std::vector<Form*> & forms)
+void Sorter::sortBySizeWidth(std::vector<std::shared_ptr<Form> > & forms)
 {
     FormSorter::sortBySizeWidthDesc(forms);
 }
-void Sorter::sortBySizeWidth(std::vector<Surface*> & surfaces)
+void Sorter::sortBySizeWidth(std::vector<std::shared_ptr<Surface> > & surfaces)
 {
     SurfaceSorter::sortBySizeWidthAsc(surfaces);
 }
-void Sorter::sortByLengthWidth(std::vector<Form*> & forms)
+void Sorter::sortByLengthWidth(std::vector<std::shared_ptr<Form> > & forms)
 {
         FormSorter::sortByLengthWidthDesc(forms);
 }
-void Sorter::sortByLengthWidth(std::vector<Surface*> & surfaces)
+void Sorter::sortByLengthWidth(std::vector<std::shared_ptr<Surface> > & surfaces)
 {
     SurfaceSorter::sortByLengthWidthAsc(surfaces);
 }
-void Sorter::sortByWidthLength(std::vector<Form*> & forms)
+void Sorter::sortByWidthLength(std::vector<std::shared_ptr<Form> > & forms)
 {
     FormSorter::sortByWidthLengthDesc(forms);
 }
-void Sorter::sortByWidthLength(std::vector<Surface*> & surfaces)
+void Sorter::sortByWidthLength(std::vector<std::shared_ptr<Surface> > & surfaces)
 {
     SurfaceSorter::sortByWidthLengthAsc(surfaces);
 }
 
 
-void FormSorter::sortBySizeLengthDesc(std::vector<Form*> & forms)
+void FormSorter::sortBySizeLengthDesc(std::vector<std::shared_ptr<Form> > & forms)
 {
     for(unsigned int j = 0; j < forms.size()-1; j++)
         for(unsigned int i = 0; i < forms.size()-1; i++)
@@ -43,7 +43,7 @@ void FormSorter::sortBySizeLengthDesc(std::vector<Form*> & forms)
                 std::swap(forms[i], forms[i+1]);
 }
 
-void FormSorter::sortBySizeWidthDesc(std::vector<Form*> & forms)
+void FormSorter::sortBySizeWidthDesc(std::vector<std::shared_ptr<Form> > & forms)
 {
     for(unsigned int j = 0; j < forms.size()-1; j++)
         for(unsigned int i = 0; i < forms.size()-1; i++)
@@ -52,7 +52,7 @@ void FormSorter::sortBySizeWidthDesc(std::vector<Form*> & forms)
                 std::swap(forms[i], forms[i+1]);
 }
 
-void FormSorter::sortByLengthWidthDesc(std::vector<Form*> & forms) //same as sortByLengthSize but faster
+void FormSorter::sortByLengthWidthDesc(std::vector<std::shared_ptr<Form> > & forms) //same as sortByLengthSize but faster
 {
     for(unsigned int j = 0; j < forms.size()-1; j++)
         for(unsigned int i = 0; i < forms.size()-1; i++)
@@ -61,7 +61,7 @@ void FormSorter::sortByLengthWidthDesc(std::vector<Form*> & forms) //same as sor
                 std::swap(forms[i], forms[i+1]);
 }
 
-void FormSorter::sortByWidthLengthDesc(std::vector<Form*> & forms) //same as sortByWidthSize but faster
+void FormSorter::sortByWidthLengthDesc(std::vector<std::shared_ptr<Form> > & forms) //same as sortByWidthSize but faster
 {
     for(unsigned int j = 0; j < forms.size()-1; j++)
         for(unsigned int i = 0; i < forms.size()-1; i++)
@@ -70,7 +70,7 @@ void FormSorter::sortByWidthLengthDesc(std::vector<Form*> & forms) //same as sor
                 std::swap(forms[i], forms[i+1]);
 }
 
-void SurfaceSorter::sortBySizeLengthAsc(std::vector<Surface*> & surfaces)
+void SurfaceSorter::sortBySizeLengthAsc(std::vector<std::shared_ptr<Surface> > & surfaces)
 {
     for(unsigned int j = 0; j < surfaces.size()-1; j++)
         for(unsigned int i = 0; i < surfaces.size()-1; i++)
@@ -79,7 +79,7 @@ void SurfaceSorter::sortBySizeLengthAsc(std::vector<Surface*> & surfaces)
                  std::swap(surfaces[i], surfaces[i+1]);
 }
 
-void SurfaceSorter::sortBySizeWidthAsc(std::vector<Surface*> & surfaces)
+void SurfaceSorter::sortBySizeWidthAsc(std::vector<std::shared_ptr<Surface> > & surfaces)
 {
     for(unsigned int j = 0; j < surfaces.size()-1; j++)
         for(unsigned int i = 0; i < surfaces.size()-1; i++)
@@ -88,7 +88,7 @@ void SurfaceSorter::sortBySizeWidthAsc(std::vector<Surface*> & surfaces)
                  std::swap(surfaces[i], surfaces[i+1]);
 }
 
-void SurfaceSorter::sortByLengthWidthAsc(std::vector<Surface*> & surfaces)
+void SurfaceSorter::sortByLengthWidthAsc(std::vector<std::shared_ptr<Surface> > & surfaces)
 {
     for(unsigned int j = 0; j < surfaces.size()-1; j++)
         for(unsigned int i = 0; i < surfaces.size()-1; i++)
@@ -97,7 +97,7 @@ void SurfaceSorter::sortByLengthWidthAsc(std::vector<Surface*> & surfaces)
                  std::swap(surfaces[i], surfaces[i+1]);
 }
 
-void SurfaceSorter::sortByWidthLengthAsc(std::vector<Surface*> & surfaces)
+void SurfaceSorter::sortByWidthLengthAsc(std::vector<std::shared_ptr<Surface> > & surfaces)
 {
     for(unsigned int j = 0; j < surfaces.size()-1; j++)
         for(unsigned int i = 0; i < surfaces.size()-1; i++)
@@ -106,22 +106,27 @@ void SurfaceSorter::sortByWidthLengthAsc(std::vector<Surface*> & surfaces)
                  std::swap(surfaces[i], surfaces[i+1]);
 }
 
-std::vector<Form*> SurfacePointerCopier::copySurfaces(std::vector<Form*> forms)
+std::vector<std::shared_ptr<Form> > SurfacePointerCopier::copySurfaces(std::vector<std::shared_ptr<Form> > forms)
 {
+    //TODO (when necessary)
+    //Create new vector with shared_ptr<Form> and push new Form with parametrs from 'forms'
+    //like for(a : forms)
+    //std::shared_ptr<Form> form (new Form (l, w, b))
+    // newVector.push_back(form)
     return forms;
 }
 
-std::vector<Surface*> SurfacePointerCopier::copySurfaces(std::vector<Surface*> surfaces)
+std::vector<std::shared_ptr<Surface> > SurfacePointerCopier::copySurfaces(std::vector<std::shared_ptr<Surface> > surfaces)
 {
     return surfaces;
 }
 
-Form* SurfacePointerCopier::copySurface(Form* form)
+std::shared_ptr<Form> SurfacePointerCopier::copySurface(std::shared_ptr<Form> form)
 {
     return form;
 }
 
-Surface* SurfacePointerCopier::copySurface(Surface* surface)
+std::shared_ptr<Surface> SurfacePointerCopier::copySurface(std::shared_ptr<Surface> surface)
 {
     return surface;
 }

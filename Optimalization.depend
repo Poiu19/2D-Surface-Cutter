@@ -86,19 +86,21 @@
 	"../dimension.hpp"
 	"../headers.hpp"
 
-1541762255 source:e:\cpp projects\optimalization\sources\form\formsetup.cpp
+1543304505 source:e:\cpp projects\optimalization\sources\form\formsetup.cpp
 	"formsetup.hpp"
 	"form.hpp"
 
-1541675161 e:\cpp projects\optimalization\sources\form\formsetup.hpp
+1543304520 e:\cpp projects\optimalization\sources\form\formsetup.hpp
+	<memory>
 	<algorithm>
 	"form.hpp"
 
-1542789950 source:e:\cpp projects\optimalization\sources\form\formsorter.cpp
+1543304652 source:e:\cpp projects\optimalization\sources\form\formsorter.cpp
 	"formsorter.hpp"
 	"form.hpp"
 
-1542793607 e:\cpp projects\optimalization\sources\form\formsorter.hpp
+1543304615 e:\cpp projects\optimalization\sources\form\formsorter.hpp
+	<memory>
 	<algorithm>
 	"form.hpp"
 	"surface.hpp"
@@ -172,4 +174,11 @@
 1542718312 e:\cpp projects\optimalization\sources\form\defaultsurface.hpp
 
 1542782399 e:\cpp projects\optimalization\sources\form\surfaceholder.hpp
+
+1542794785 source:e:\cpp projects\optimalization\sources\flags.cpp
+	"flags.hpp"
+	"generalconverters.hpp"
+
+1542794418 e:\cpp projects\optimalization\sources\flags.hpp
+	"headers.hpp"
 

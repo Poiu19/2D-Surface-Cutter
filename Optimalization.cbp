@@ -5,6 +5,7 @@
 		<Option title="Optimalization" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="Tests\;Tests\sources\;Tests\sources\form\;Tests\sources\saw\;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Optimalization" prefix_auto="1" extension_auto="1" />
@@ -12,6 +13,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-std=c++1z" />
 					<Add option="-g" />
 				</Compiler>
 				<ResourceCompiler>
@@ -25,6 +27,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-std=c++1z" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -37,7 +40,8 @@
 		</Compiler>
 		<Unit filename="sources/dimension.cpp" />
 		<Unit filename="sources/dimension.hpp" />
-		<Unit filename="sources/form/defaultsurface.hpp" />
+		<Unit filename="sources/flags.cpp" />
+		<Unit filename="sources/flags.hpp" />
 		<Unit filename="sources/form/edgebanding.cpp" />
 		<Unit filename="sources/form/edgebanding.hpp" />
 		<Unit filename="sources/form/form.cpp" />
