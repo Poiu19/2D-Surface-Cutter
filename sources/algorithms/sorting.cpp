@@ -4,17 +4,45 @@
 //#include <type_traits>
 //std::is_integral<T>::value for checking if it is int
 
-template <typename T>
-void sortBubble(std::vector<T> & dataToSort) //O(n^2)
+template <>
+void sortBubble<int>(std::vector<int> & dataToSort)
 {
-    for(unsigned int i = 0; i < dataToSort.size(); i++)
+    std::vector<float> dataToSortConverted(dataToSort.begin(), dataToSort.end());
+    sortBubble<float>(dataToSortConverted);
+    dataToSort.clear();
+    for(toCopy : dataToSortConverted)
+        dataToSort.push_back((int)toCopy);
+}
+
+template <>
+void sortBubble<float>(std::vector<float> & dataToSort)
+{
+    int positionMin = 0, positionMax = dataToSort.size()-2, position;
+    do
     {
-        for(unsigned int j = 0; j < dataToSort.size()-i-1; j++)
+        position = -1;
+        for(int i = positionMin; i <= positionMax; i++)
         {
-            if(dataToSort[j] > dataToSort[j+1])
-                std::swap(dataToSort[j], dataToSort[j+1]);
+            if(dataToSort[i] > dataToSort[i+1])
+            {
+                std::swap(dataToSort[i], dataToSort[i+1]);
+                position = i;
+            }
         }
-    }
+        if(position < 0)
+            break;
+        positionMax = position - 1;
+        position = -1;
+        for(int i = positionMax; i >= positionMin; i--)
+        {
+            if(dataToSort[i] > dataToSort[i+1])
+            {
+                std::swap(dataToSort[i], dataToSort[i+1]);
+                position = i;
+            }
+        }
+        positionMin = position + 1;
+    } while (position >= 0);
 }
 
 /*
@@ -31,6 +59,3 @@ void bubbleSort<std::shared_ptr<Surface> >(std::vector<std::shared_ptr<Surface> 
         }
     }
 }*/
-
-template <typename T>
-void
