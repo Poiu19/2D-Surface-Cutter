@@ -5,6 +5,7 @@
 #include "form/formsorter.hpp"
 #include "saw/sawconfig.hpp"
 #include "generalconverters.hpp"
+#include "algorithms/sorting.hpp"
 
 int main()
 {
@@ -38,6 +39,17 @@ int main()
     surfaces.push_back(surface4);
     surfaces.push_back(surface5);
     surfaces.push_back(surface6);
+    std::vector<int> HH;
+    HH.push_back(4);
+    HH.push_back(5);
+    HH.push_back(1);
+    HH.push_back(17);
+    HH.push_back(3);
+    HH.push_back(1);
+    sortBubble<int>(HH);
+    for(h : HH)
+        std::cout << h << std::endl;
+    //bubbleSort<std::vector<int> >(vec1);
     std::cout << "Sortowanie SizeLength" << std::endl;
     for (form : forms)
     {
