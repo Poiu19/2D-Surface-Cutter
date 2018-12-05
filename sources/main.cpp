@@ -39,14 +39,14 @@ int main()
     surfaces.push_back(surface4);
     surfaces.push_back(surface5);
     surfaces.push_back(surface6);
-    std::vector<int> HH;
+    std::vector<float> HH;
     HH.push_back(4); //1
     HH.push_back(5); //1
     HH.push_back(1); //3
     HH.push_back(17); //4
     HH.push_back(3);//5
     HH.push_back(1); //17
-    sortBubble<int>(HH);
+    SortingAlgorithms::sortBubble<float>(HH);
     for(h : HH)
         std::cout << h << std::endl;
     //bubbleSort<std::vector<int> >(vec1);
