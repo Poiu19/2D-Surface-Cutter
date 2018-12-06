@@ -39,17 +39,16 @@ int main()
     surfaces.push_back(surface4);
     surfaces.push_back(surface5);
     surfaces.push_back(surface6);
-    std::vector<float> HH;
-    HH.push_back(4); //1
-    HH.push_back(5); //1
-    HH.push_back(1); //3
-    HH.push_back(17); //4
-    HH.push_back(3);//5
-    HH.push_back(1); //17
-    SortingAlgorithms::sortBubble<float>(HH);
+    std::vector<int> HH;
+    HH.push_back(4);
+    HH.push_back(5);
+    HH.push_back(1);
+    HH.push_back(17);
+    HH.push_back(3);
+    HH.push_back(1);
+    SortingAlgorithms::sortQuick<int>(HH);
     for(h : HH)
         std::cout << h << std::endl;
-    //bubbleSort<std::vector<int> >(vec1);
     std::cout << "Sortowanie SizeLength" << std::endl;
     for (form : forms)
     {

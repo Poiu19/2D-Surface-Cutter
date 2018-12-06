@@ -131,7 +131,7 @@
 
 1543499028 e:\cpp projects\optimalization\sources\headers.hpp
 
-1544007885 source:e:\cpp projects\optimalization\sources\main.cpp
+1544095495 source:e:\cpp projects\optimalization\sources\main.cpp
 	<iostream>
 	<memory>
 	"form/form.hpp"
@@ -5499,5 +5499,7 @@
 	<iostream>
 	"sorting.hpp"
 
-1544007854 e:\cpp projects\optimalization\sources\algorithms\sorting.hpp
+1544095714 e:\cpp projects\optimalization\sources\algorithms\sorting.hpp
+	<vector>
+	<iostream>
 
