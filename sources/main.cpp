@@ -48,7 +48,7 @@ int main()
     HH.push_back(17);
     HH.push_back(3);
     HH.push_back(1);
-    SortingAlgorithms::sortQuick<int>(HH);
+    SortingAlgorithms::sortHeap<int>(HH);
     for(int h : HH)
         std::cout << h << std::endl;
     std::cout << "Sortowanie SizeLength" << std::endl;
@@ -81,7 +81,5 @@ int main()
     }
     std::cout << SawConfig::getDoubleThickQuantion() << std::endl << SawConfig::getEdgeQuantion() << std::endl << SawConfig::getSawThick() << std::endl;
     std::cout << FlagDecryptor::getFlagQueuePlace(FLAG_NOTSWAPED) << " - " << FlagDecryptor::isStepFlagAssigned(FLAG_NOTSWAPED, 13) << std::endl;
-	int justStop;
-	std::cin >> justStop;
     return 0;
 }

@@ -3,3 +3,6 @@
 sources/boost_1_66_0
 .vs
 x64
+*.tlog
+*.log
+/Test

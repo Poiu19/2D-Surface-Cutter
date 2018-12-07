@@ -35,4 +35,10 @@ enum FlagStepType{
     FLAG_VERTICALCUT = 4,
     FLAG_HORIZONTALCUT = 8
 };
+
+enum SortType {
+	SORT_BUBBLE,
+	SORT_QUICK,
+	SORT_HEAP
+};
 #endif // HEADERS_HPP_INCLUDED
