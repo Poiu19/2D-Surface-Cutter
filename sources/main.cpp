@@ -1,12 +1,14 @@
 #include <iostream>
 #include <memory>
+#include <iostream>
+#include <iterator>
+#include <algorithm>
 #include "form/form.hpp"
 #include "form/formsetup.hpp"
 #include "form/formsorter.hpp"
 #include "saw/sawconfig.hpp"
 #include "generalconverters.hpp"
 #include "algorithms/sorting.hpp"
-
 int main()
 {
     std::vector<std::shared_ptr<Form> > forms;
@@ -47,37 +49,39 @@ int main()
     HH.push_back(3);
     HH.push_back(1);
     SortingAlgorithms::sortQuick<int>(HH);
-    for(h : HH)
+    for(int h : HH)
         std::cout << h << std::endl;
     std::cout << "Sortowanie SizeLength" << std::endl;
-    for (form : forms)
+    for (std::shared_ptr<Form> form : forms)
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
     }
     Sorter::sortBySizeWidth(forms);
     std::cout << "Sortowanie SizeWidth" << std::endl;
-    for (form : forms)
+    for (std::shared_ptr<Form> form : forms)
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
     }
     Sorter::sortByLengthWidth(forms);
     std::cout << "Sortowanie LengthWidth" << std::endl;
-    for (form : forms)
+    for (std::shared_ptr<Form> form : forms)
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
     }
     Sorter::sortByWidthLength(forms);
     std::cout << "Sortowanie WidthLength" << std::endl;
-    for (form : forms)
+    for (std::shared_ptr<Form> form : forms)
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
     }
     Sorter::sortByLengthWidth(surfaces);
-    for (surface : surfaces)
+    for (std::shared_ptr<Surface> surface : surfaces)
     {
         std::cout << "X: " << surface->getPosX() << ", Y: " << surface->getPosY() << ", LENGTH: " << surface->getLength() << ", WIDTH: " << surface->getWidth() << std::endl;
     }
     std::cout << SawConfig::getDoubleThickQuantion() << std::endl << SawConfig::getEdgeQuantion() << std::endl << SawConfig::getSawThick() << std::endl;
     std::cout << FlagDecryptor::getFlagQueuePlace(FLAG_NOTSWAPED) << " - " << FlagDecryptor::isStepFlagAssigned(FLAG_NOTSWAPED, 13) << std::endl;
+	int justStop;
+	std::cin >> justStop;
     return 0;
 }

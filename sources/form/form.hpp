@@ -1,9 +1,9 @@
 #ifndef FORM_HPP_INCLUDED
 #define FORM_HPP_INCLUDED
-#include "../generalconverters.hpp"
+#include "generalconverters.hpp"
 #include "edgebanding.hpp"
-#include "../dimension.hpp"
-#include "../headers.hpp"
+#include "dimension.hpp"
+#include "headers.hpp"
 class Form : public Dimension, public EdgeBanding {
     protected: unsigned int ID;
     protected: bool swapAble;

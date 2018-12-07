@@ -2,6 +2,7 @@
 #define FORMSORTER_HPP_INCLUDED
 #include <memory>
 #include <algorithm>
+#include <vector>
 #include "form.hpp"
 #include "surface.hpp"
 

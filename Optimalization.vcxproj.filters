@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Header Files\form">
+      <UniqueIdentifier>{7fda9e33-22f9-41ad-a3dd-ccadbdccd94d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\algorithms">
+      <UniqueIdentifier>{f60d6812-835a-4086-a22a-4ab3cb7813cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\saw">
+      <UniqueIdentifier>{dff5dc67-c181-4fc6-8de1-b8dba4c89023}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\form">
+      <UniqueIdentifier>{a431a578-9080-4d54-bd15-75086605ee14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\algorithms">
+      <UniqueIdentifier>{9a33a0c8-0a24-44f0-ab0d-0389e6d314ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\saw">
+      <UniqueIdentifier>{7482fb0b-a093-4864-be90-5ef2a9d8fe28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{a89b1337-eb76-4e3f-9976-18c80c595c8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tests\algorithms">
+      <UniqueIdentifier>{17db313c-c2b1-45b3-b87a-e45021c073a8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sources\dimension.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\flags.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\generalconverters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\position.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\step.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\form\form.cpp">
+      <Filter>Source Files\form</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\form\formsetup.cpp">
+      <Filter>Source Files\form</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\form\formsorter.cpp">
+      <Filter>Source Files\form</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\form\surface.cpp">
+      <Filter>Source Files\form</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\form\edgebanding.cpp">
+      <Filter>Source Files\form</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\algorithms\sorting.cpp">
+      <Filter>Source Files\algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\saw\sawconfig.cpp">
+      <Filter>Source Files\saw</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\tests\algorithms\sortingTest.cpp">
+      <Filter>Tests\algorithms</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sources\dimension.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\flags.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\generalconverters.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\headers.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\position.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\step.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\form\formsorter.hpp">
+      <Filter>Header Files\form</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\form\formsetup.hpp">
+      <Filter>Header Files\form</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\form\form.hpp">
+      <Filter>Header Files\form</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\form\surface.hpp">
+      <Filter>Header Files\form</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\form\edgebanding.hpp">
+      <Filter>Header Files\form</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\algorithms\sorting.hpp">
+      <Filter>Header Files\algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\saw\sawconfig.hpp">
+      <Filter>Header Files\saw</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\tests\algorithms\sortingTest.hpp">
+      <Filter>Tests\algorithms</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sources\saw\sawconfig.cfg">
+      <Filter>Header Files\saw</Filter>
+    </None>
+  </ItemGroup>
+</Project>

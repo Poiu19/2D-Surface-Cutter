@@ -1,3 +1,4 @@
+#include <vector>
 #include "formsetup.hpp"
 #include "form.hpp"
 void FormSetup::setSize(std::shared_ptr<Form> form)
@@ -22,13 +23,13 @@ void FormSetup::setID(std::shared_ptr<Form> form, unsigned int ID)
 
 void FormSetup::setIDToAll(std::vector<std::shared_ptr<Form> > Forms, unsigned int startID)
 {
-    for(form : Forms)
+    for(std::shared_ptr<Form> form : Forms)
         setID(form, startID++);
 }
 
 void FormSetup::setSizeToAll(std::vector<std::shared_ptr<Form> > Forms)
 {
-    for(form : Forms)
+    for(std::shared_ptr<Form> form : Forms)
         setSize(form);
 }
 

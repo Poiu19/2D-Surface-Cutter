@@ -2,6 +2,7 @@
 #define FORMCONTROLLER_HPP_INCLUDED
 #include <memory>
 #include <algorithm>
+#include <vector>
 #include "form.hpp"
 class FormSetup {
     public: static void setSize(std::shared_ptr<Form> form);

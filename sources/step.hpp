@@ -1,6 +1,7 @@
 #ifndef STEP_HPP_INCLUDED
 #define STEP_HPP_INCLUDED
 #include <algorithm>
+#include <vector>
 #include "form/form.hpp"
 #include "form/surface.hpp"
 

@@ -1,5 +1,5 @@
 #include "edgebanding.hpp"
-#include "../headers.hpp"
+#include "headers.hpp"
 EdgeBanding::EdgeBanding(char * banding)
 {
     this->setEdgeLeft(banding[EDGE_LEFT]);
