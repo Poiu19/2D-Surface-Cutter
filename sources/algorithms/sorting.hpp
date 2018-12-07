@@ -86,13 +86,13 @@ namespace SortingAlgorithms
 			int rightChild = 2 * i + 2;
 			//Why 2*i + 1 and 2*i + 2; ?
 			//Input data: 5, 9, 10, 44, 23, 55, 23, 1
-			//                        5 (i = 0)
-			//						/			\
-			//					  9 (1)       10 (2)
-			//					/		\	   /	\
-			//				44 (3)  23  (4)  55 (5)  23 (6)
-			//				/
-			//			 1 (7)
+			//				| 5(i=0) |
+			//				/		\
+			//			9(1)		10(2)
+			//			/	\		/	\
+			//		44(3)	23(4) 55(5)	23(6)
+			//		/
+			//	1(7)
 			// Child for i=0 - 2*0+1 and 2*0+2 = 1 and 2; It's true
 			// Child for i=1 - 2*1+1 and 2*1+2 = 3 and 4; It's true
 			// Child for i=2 - 2*2+1 and 2*2+2 = 5 and 6; It's true

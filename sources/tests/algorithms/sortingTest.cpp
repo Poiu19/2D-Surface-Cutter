@@ -1,7 +1,5 @@
 #define BOOST_TEST_DYN_LINK
-#define BOOST_TEST_MODULE SortingAlgorithms
 #include <boost/test/unit_test.hpp>
-#include "algorithms/sorting.hpp"
 #include "sortingTest.hpp"
 #include <vector>
 

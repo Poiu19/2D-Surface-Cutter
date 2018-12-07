@@ -1,3 +1,5 @@
+#ifndef SORTINGTEST_HPP_INCLUDED
+#define SORTINGTEST_HPP_INCLUDED
 #include <vector>
 #include <time.h>
 #include <stdlib.h>
@@ -39,3 +41,5 @@ struct SortingDataTest{
 		return testDataInput == testDataOutput ? true : false;
 	}
 };
+
+#endif
