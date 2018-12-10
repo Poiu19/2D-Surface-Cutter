@@ -4,10 +4,10 @@
 #include "headers.hpp"
 
 struct DetectFlagTest {
-	Flag flags;
-	bool isAdded(FlagStepType flag);
-	void setFlags(int flags);
-	void addFlag(FlagStepType flag);
+	inline bool isAdded(FlagStepType flag);
+	inline void setFlags(int flags);
+	inline void addFlag(FlagStepType flag);
+	private: Flag flags;
 };
 
 

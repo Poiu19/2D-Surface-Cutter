@@ -87,6 +87,9 @@
     <ClCompile Include="sources\tests\main.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
+    <ClCompile Include="sources\tests\dimensionTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sources\dimension.hpp">
@@ -132,6 +135,9 @@
       <Filter>Tests\algorithms</Filter>
     </ClInclude>
     <ClInclude Include="sources\tests\flagsTest.hpp">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\tests\dimensionTest.hpp">
       <Filter>Tests</Filter>
     </ClInclude>
   </ItemGroup>
