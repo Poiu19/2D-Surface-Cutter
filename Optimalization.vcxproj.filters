@@ -90,6 +90,9 @@
     <ClCompile Include="sources\tests\dimensionTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
+    <ClCompile Include="sources\tests\stepTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sources\dimension.hpp">
@@ -138,6 +141,9 @@
       <Filter>Tests</Filter>
     </ClInclude>
     <ClInclude Include="sources\tests\dimensionTest.hpp">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\tests\stepTest.hpp">
       <Filter>Tests</Filter>
     </ClInclude>
   </ItemGroup>
