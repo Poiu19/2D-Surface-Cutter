@@ -17,7 +17,7 @@ class Form : public Dimension, public EdgeBanding {
     public: void setType(FormType type);
     //getters
     public: unsigned int getID();
-    public: bool getSwapAbleStatus();
+    public: bool isSwapAble();
     public: FormType getFormType();
 
     public: bool isForm()

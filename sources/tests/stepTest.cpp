@@ -2,9 +2,12 @@
 #include <boost/test/unit_test.hpp>
 #include "stepTest.hpp"
 
-StepTestChilds::StepTestChilds()
+StepTestChilds::StepTestChilds(Step * defaultStep)
 {
-	startStep = new Step(nullptr);
+	if (defaultStep == nullptr)
+		startStep = new Step(nullptr);
+	else
+		startStep = defaultStep;
 	firstChild = startStep->addChildStep();
 	secondChildA = firstChild->addChildStep();
 	secondChildB = firstChild->addChildStep();
@@ -14,7 +17,9 @@ StepTestChilds::StepTestChilds()
 StepTestChilds::~StepTestChilds()
 {
 	delete startStep;
+	startStep = nullptr;
 	delete newParent;
+	newParent = nullptr;
 }
 
 bool StepTestChilds::isSiblingAWithB()

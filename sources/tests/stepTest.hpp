@@ -6,7 +6,7 @@
 
 class StepTestChilds {
 	public: Step * firstChild, * secondChildA, * secondChildB, * startStep, * newParent;
-			StepTestChilds();
+			StepTestChilds(Step * defaultStep = nullptr);
 			~StepTestChilds();
 			bool isSiblingAWithB();
 			bool isChildAGrandsonForStartStep();

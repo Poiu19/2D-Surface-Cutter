@@ -25,7 +25,7 @@ unsigned int Form::getID()
     return this->ID;
 }
 
-bool Form::getSwapAbleStatus()
+bool Form::isSwapAble()
 {
     return this->swapAble;
 }
