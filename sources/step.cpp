@@ -30,5 +30,25 @@ Step * Step::setParentStep(Step * parentStep)
 
 Step * Step::getParentStep()
 {
-    return this->parentStep;
+	if (parentStep != nullptr)
+		return this->parentStep;
+	return nullptr;
+}
+
+Step * Step::setNewParentStep(Step * newParent)
+{
+	if (this->getParentStep() != nullptr)
+	{
+		for (auto it = this->getParentStep()->childSteps.begin(); it != this->getParentStep()->childSteps.end(); ++it)
+		{
+			if (*it == this)
+			{
+				this->getParentStep()->childSteps.erase(it);
+				break;
+			}
+		}
+	}
+	this->parentStep = newParent;
+	newParent->childSteps.push_back(this);
+	return this;
 }

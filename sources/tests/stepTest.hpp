@@ -5,12 +5,13 @@
 #include "headers.hpp"
 
 class StepTestChilds {
-	public: Step * firstChild, * secondChildA, * secondChildB, * startStep;
+	public: Step * firstChild, * secondChildA, * secondChildB, * startStep, * newParent;
 			StepTestChilds();
 			~StepTestChilds();
 			bool isSiblingAWithB();
 			bool isChildAGrandsonForStartStep();
-			bool isChildCountEqualTo(Step *to, int howMany);
+			bool isChildCountEqualTo(Step *parent, int howMany);
+			bool isSettingParentMakeStepAsChild();
 };
 
 #endif
