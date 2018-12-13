@@ -93,6 +93,12 @@
     <ClCompile Include="sources\tests\stepTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
+    <ClCompile Include="sources\stepparams.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sources\tests\stepparamsTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sources\dimension.hpp">
@@ -144,6 +150,12 @@
       <Filter>Tests</Filter>
     </ClInclude>
     <ClInclude Include="sources\tests\stepTest.hpp">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\stepparams.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\tests\stepparamsTest.hpp">
       <Filter>Tests</Filter>
     </ClInclude>
   </ItemGroup>

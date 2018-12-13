@@ -8,10 +8,10 @@
 class Step {
 	protected: Step * parentStep;
     public: std::vector<Step*> childSteps;
-    protected: std::vector<Form*> availableForms;
-			std::vector<Form*> usedForms;
-			std::vector<Surface*> availableSurfaces;
-			std::vector<Surface*> usedSurfaces;
+    protected:	std::vector<Form*> availableForms;
+				std::vector<Form*> usedForms;
+				std::vector<Surface*> availableSurfaces;
+				std::vector<Surface*> usedSurfaces;
     public: Step(Step * parentStep = nullptr);
 			~Step();
     //creators

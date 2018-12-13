@@ -5,3 +5,4 @@
 #include "flagsTest.hpp"
 #include "dimensionTest.hpp"
 #include "stepTest.hpp"
+#include "stepparamsTest.hpp"
