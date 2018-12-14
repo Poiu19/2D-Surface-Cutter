@@ -8,6 +8,11 @@ Step::Step(Step * parentStep)
 
 Step::~Step()
 {
+	if (params != nullptr)
+	{
+		delete params;
+		params = nullptr;
+	}
     for (Step * childStep : this->childSteps)
     {
         if(childStep != nullptr)
@@ -51,4 +56,9 @@ Step * Step::setNewParentStep(Step * newParent)
 	this->parentStep = newParent;
 	newParent->childSteps.push_back(this);
 	return this;
+}
+
+void Step::setParams(unsigned int formIndex, unsigned int surfaceIndex, Cut cutType, bool swap)
+{
+	params = new StepParams(formIndex, surfaceIndex, cutType, swap);
 }

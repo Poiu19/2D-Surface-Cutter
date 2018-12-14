@@ -170,6 +170,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="sources\algorithms\sorting.cpp" />
+    <ClCompile Include="sources\cuttingprocess.cpp" />
     <ClCompile Include="sources\dimension.cpp" />
     <ClCompile Include="sources\flags.cpp" />
     <ClCompile Include="sources\form\edgebanding.cpp" />
@@ -193,6 +194,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="sources\tests\cuttingprocessTest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="sources\tests\dimensionTest.cpp" />
     <ClCompile Include="sources\tests\flagsTest.cpp">
@@ -218,6 +224,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sources\algorithms\sorting.hpp" />
+    <ClInclude Include="sources\cuttingprocess.hpp" />
     <ClInclude Include="sources\dimension.hpp" />
     <ClInclude Include="sources\flags.hpp" />
     <ClInclude Include="sources\form\edgebanding.hpp" />
@@ -239,6 +246,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="sources\tests\cuttingprocessTest.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="sources\tests\dimensionTest.hpp" />
     <ClInclude Include="sources\tests\flagsTest.hpp">

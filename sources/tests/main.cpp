@@ -6,3 +6,4 @@
 #include "dimensionTest.hpp"
 #include "stepTest.hpp"
 #include "stepparamsTest.hpp"
+#include "cuttingprocessTest.hpp"

@@ -4,10 +4,11 @@
 #include <vector>
 #include "form/form.hpp"
 #include "form/surface.hpp"
-
+#include "stepparams.hpp"
 class Step {
 	protected: Step * parentStep;
     public: std::vector<Step*> childSteps;
+			StepParams * params = nullptr;
     protected:	std::vector<Form*> availableForms;
 				std::vector<Form*> usedForms;
 				std::vector<Surface*> availableSurfaces;
@@ -20,6 +21,7 @@ class Step {
     //setters
 	protected: Step * setParentStep(Step * step);
 	public: Step * setNewParentStep(Step * newParent);
+			void setParams(unsigned int formIndex, unsigned int surfaceIndex, Cut cutType, bool swap);
     //getters
 			Step * getParentStep();
 };
