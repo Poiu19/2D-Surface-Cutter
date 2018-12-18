@@ -2,6 +2,7 @@
 #define CUTTINGPROCESS_HPP_INCLUDED
 #include <vector>
 #include "step.hpp"
+
 class CuttingResult {
 	private: std::string sequenceChain;
 			 int platesCount, unusedSurfacesCount;
@@ -26,7 +27,7 @@ class CuttingResult {
 };
 
 class CuttingProcess {
-	std::vector <CuttingResult> * results;
+public: CuttingProcess();
 };
 
 #endif

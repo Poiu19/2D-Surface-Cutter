@@ -36,5 +36,5 @@ void FormSetup::setSizeToAll(std::vector<std::shared_ptr<Form> > Forms)
 void FormSetup::setupAllForms(std::vector<std::shared_ptr<Form> > Forms)
 {
     setIDToAll(Forms);
-    setSizeToAll(Forms);
+    //setSizeToAll(Forms); //Dimension's constructor do this on his own
 }

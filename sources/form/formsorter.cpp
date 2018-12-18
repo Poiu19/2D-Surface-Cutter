@@ -106,6 +106,58 @@ void SurfaceSorter::sortByWidthLengthAsc(std::vector<std::shared_ptr<Surface> > 
                  std::swap(surfaces[i], surfaces[i+1]);
 }
 
+void SurfaceSorter::insertIntoCorrectPlaceBySizeLength(std::vector<std::shared_ptr<Surface> > & surfaces, std::shared_ptr<Surface> surface)
+{
+	for (std::vector<std::shared_ptr<Surface> >::iterator it = surfaces.begin(); it != surfaces.end(); it++)
+	{
+		if ((*it)->getSizeArea() > surface->getSizeArea() || ((*it)->getSizeArea() == surface->getSizeArea() && (*it)->getLength() > surface->getLength()))
+		{
+			surfaces.insert(it, surface);
+			return;
+		}
+	}
+	surfaces.push_back(surface);
+}
+
+void SurfaceSorter::insertIntoCorrectPlaceBySizeWidth(std::vector<std::shared_ptr<Surface> > & surfaces, std::shared_ptr<Surface> surface)
+{
+	for (std::vector<std::shared_ptr<Surface> >::iterator it = surfaces.begin(); it != surfaces.end(); it++)
+	{
+		if ((*it)->getSizeArea() > surface->getSizeArea() || ((*it)->getSizeArea() == surface->getSizeArea() && (*it)->getWidth() > surface->getWidth()))
+		{
+			surfaces.insert(it, surface);
+			return;
+		}
+	}
+	surfaces.push_back(surface);
+}
+
+void SurfaceSorter::insertIntoCorrectPlaceByWidthLength(std::vector<std::shared_ptr<Surface> > & surfaces, std::shared_ptr<Surface> surface)
+{
+	for (std::vector<std::shared_ptr<Surface> >::iterator it = surfaces.begin(); it != surfaces.end(); it++)
+	{
+		if ((*it)->getWidth() > surface->getWidth() || ((*it)->getWidth() == surface->getWidth() && (*it)->getLength() > surface->getLength()))
+		{
+			surfaces.insert(it, surface);
+			return;
+		}
+	}
+	surfaces.push_back(surface);
+}
+
+void SurfaceSorter::insertIntoCorrectPlaceByLengthWidth(std::vector<std::shared_ptr<Surface> > & surfaces, std::shared_ptr<Surface> surface)
+{
+	for (std::vector<std::shared_ptr<Surface> >::iterator it = surfaces.begin(); it != surfaces.end(); it++)
+	{
+		if ((*it)->getLength() > surface->getLength() || ((*it)->getLength() == surface->getLength() && (*it)->getWidth() > surface->getWidth()))
+		{
+			surfaces.insert(it, surface);
+			return;
+		}
+	}
+	surfaces.push_back(surface);
+}
+
 std::vector<std::shared_ptr<Form> > SurfacePointerCopier::copySurfaces(std::vector<std::shared_ptr<Form> > forms)
 {
     //TODO (when necessary)

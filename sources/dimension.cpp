@@ -3,6 +3,7 @@ Dimension::Dimension(unsigned short int length, unsigned short int width)
 {
     this->setLength(length);
     this->setWidth(width);
+	this->setSizeArea(((float)length / 1000.0f) * ((float)width / 1000.0f));
 }
 void Dimension::setLength(unsigned short int length)
 {

@@ -35,22 +35,23 @@ int main()
     std::shared_ptr<Surface> surface4(new Surface(3, 4, 250, 400));
     std::shared_ptr<Surface> surface5(new Surface(3, 3, 300, 400));
     std::shared_ptr<Surface> surface6(new Surface(4, 8, 300, 200));
+	std::shared_ptr<Surface> surface7(new Surface(11, 11, 100, 600));
     surfaces.push_back(surface1);
     surfaces.push_back(surface2);
     surfaces.push_back(surface3);
     surfaces.push_back(surface4);
     surfaces.push_back(surface5);
     surfaces.push_back(surface6);
-    std::vector<int> HH;
-    HH.push_back(4);
-    HH.push_back(5);
-    HH.push_back(1);
-    HH.push_back(17);
-    HH.push_back(3);
-    HH.push_back(1);
-    SortingAlgorithms::sortHeap<int>(HH);
-    for(int h : HH)
-        std::cout << h << std::endl;
+	Sorter::sortBySizeLength(surfaces);
+	
+	for (std::shared_ptr<Surface> surface : surfaces)
+		std::cout << surface->getPosX() << ", " << surface->getPosY() << ", size: " << surface->getSizeArea() << ", L: " << surface->getLength() << ", W: " << surface->getWidth() << "\n";
+
+	SurfaceSorter::insertIntoCorrectPlaceBySizeLength(surfaces, surface7);
+	std::cout << std::endl;
+	for (std::shared_ptr<Surface> surface : surfaces)
+		std::cout << surface->getPosX() << ", " << surface->getPosY() << ", size: " << surface->getSizeArea() << ", L: " << surface->getLength() << ", W: " << surface->getWidth() << "\n";
+
     std::cout << "Sortowanie SizeLength" << std::endl;
     for (std::shared_ptr<Form> form : forms)
     {

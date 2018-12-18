@@ -1,4 +1,5 @@
 #include "cuttingprocess.hpp"
+#include <vector>
 void CuttingResult::setPlatesCount(int count)
 {
 	platesCount = count;

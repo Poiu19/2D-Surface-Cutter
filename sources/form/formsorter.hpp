@@ -29,6 +29,10 @@ class SurfaceSorter {
     public: static void sortBySizeWidthAsc(std::vector<std::shared_ptr<Surface> > & surfaces);
     public: static void sortByLengthWidthAsc(std::vector<std::shared_ptr<Surface> > & surfaces);
     public: static void sortByWidthLengthAsc(std::vector<std::shared_ptr<Surface> > & surfaces);
+	public: static void insertIntoCorrectPlaceBySizeLength(std::vector<std::shared_ptr<Surface> > & surfaces, std::shared_ptr<Surface> surface);
+	public: static void insertIntoCorrectPlaceBySizeWidth(std::vector<std::shared_ptr<Surface> > & surfaces, std::shared_ptr<Surface> surface);
+	public: static void insertIntoCorrectPlaceByWidthLength(std::vector<std::shared_ptr<Surface> > & surfaces, std::shared_ptr<Surface> surface);
+	public: static void insertIntoCorrectPlaceByLengthWidth(std::vector<std::shared_ptr<Surface> > & surfaces, std::shared_ptr<Surface> surface);
 };
 
 class SurfacePointerCopier {
