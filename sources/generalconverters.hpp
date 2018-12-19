@@ -2,12 +2,13 @@
 #define GENERALCONVERTERS_HPP_INCLUDED
 #include <string>
 #include <math.h>
-#include "headers.hpp"
+#include "step.hpp"
 #include "form/edgebanding.hpp"
+#include "headers.hpp"
 class StringConverter {
     public: static char * strToChar(std::string str);
-    public: static float strToFloat(std::string str);
-    public: static int strToInt(std::string str, RoundType type = ROUND_NORMAL);
+			static float strToFloat(std::string str);
+			static int strToInt(std::string str, RoundType type = ROUND_NORMAL);
 };
 
 class EdgeBandingConverter {
@@ -20,6 +21,9 @@ class FlagDecryptor {
     public: static bool isStepFlagAssigned(FlagStepType flag, int flags);
 };
 
+class ChainConnector {
+	public: static std::string getChain(Step * lastStep);
+};
 
 
 #endif // GENERALCONVERTERS_HPP_INCLUDED

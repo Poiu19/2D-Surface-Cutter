@@ -149,6 +149,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>E:\Cpp Projects\Optimalization\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>E:\Cpp Projects\Optimalization\sources\boost_1_66_0\lib64-msvc-14.1;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -158,6 +159,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>E:\Cpp Projects\Optimalization\sources;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -166,46 +168,122 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>E:\Cpp Projects\Optimalization\sources;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="sources\algorithms\sorting.cpp" />
-    <ClCompile Include="sources\cuttingprocess.cpp" />
-    <ClCompile Include="sources\dimension.cpp" />
-    <ClCompile Include="sources\flags.cpp" />
-    <ClCompile Include="sources\form\edgebanding.cpp" />
-    <ClCompile Include="sources\form\form.cpp" />
-    <ClCompile Include="sources\form\formsetup.cpp" />
-    <ClCompile Include="sources\form\formsorter.cpp" />
-    <ClCompile Include="sources\form\surface.cpp" />
-    <ClCompile Include="sources\generalconverters.cpp" />
+    <ClCompile Include="sources\algorithms\sorting.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\cuttingprocess.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\dimension.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\flags.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\form\edgebanding.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\form\form.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\form\formsetup.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\form\formsorter.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\form\surface.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\generalconverters.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
     <ClCompile Include="sources\main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">true</ExcludedFromBuild>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
     </ClCompile>
-    <ClCompile Include="sources\position.cpp" />
-    <ClCompile Include="sources\saw\sawconfig.cpp" />
-    <ClCompile Include="sources\step.cpp" />
+    <ClCompile Include="sources\position.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\saw\sawconfig.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\step.cpp">
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
     <ClCompile Include="sources\stepparams.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
     </ClCompile>
     <ClCompile Include="sources\tests\algorithms\sortingTest.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
     </ClCompile>
     <ClCompile Include="sources\tests\cuttingprocessTest.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
     </ClCompile>
     <ClCompile Include="sources\tests\dimensionTest.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
     </ClCompile>
     <ClCompile Include="sources\tests\flagsTest.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <ClCompile Include="sources\tests\generalconvertersTest.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
@@ -214,16 +292,24 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
     </ClCompile>
     <ClCompile Include="sources\tests\stepparamsTest.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
     </ClCompile>
     <ClCompile Include="sources\tests\stepTest.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdcpplatest</LanguageStandard>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Test|x64'">stdcpplatest</LanguageStandard>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -265,6 +351,11 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="sources\tests\generalconvertersTest.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="sources\tests\stepparamsTest.hpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Test|x64'">false</ExcludedFromBuild>

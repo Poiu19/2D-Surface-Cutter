@@ -1,6 +1,5 @@
 #ifndef FORM_HPP_INCLUDED
 #define FORM_HPP_INCLUDED
-#include "generalconverters.hpp"
 #include "edgebanding.hpp"
 #include "dimension.hpp"
 #include "headers.hpp"
@@ -9,8 +8,8 @@ class Form : public Dimension, public EdgeBanding {
     protected: bool swapAble;
     protected: FormType type;
 
-    public: Form(unsigned short int length, unsigned short int width, char * banding = StringConverter::strToChar("0000"));
-
+public: Form(unsigned short int length, unsigned short int width, char * banding);
+		
     //setters
     public: void setID(unsigned int ID);
     public: void setSwapAbleStatus(bool status);
@@ -27,7 +26,7 @@ class Form : public Dimension, public EdgeBanding {
 };
 
 class FormSwapAble : public Form {
-    public: FormSwapAble(unsigned short int length, unsigned short int width, char * banding = StringConverter::strToChar("0000"));
+public: FormSwapAble(unsigned short int length, unsigned short int width, char * banding);
 };
 
 

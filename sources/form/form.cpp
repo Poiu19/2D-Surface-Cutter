@@ -1,5 +1,6 @@
 #include "form.hpp"
-Form::Form(unsigned short int length, unsigned short int width, char * banding)
+#include "generalconverters.hpp"
+Form::Form(unsigned short int length, unsigned short int width, char * banding = StringConverter::strToChar("0000"))
     : Dimension(length, width), EdgeBanding(banding)
 {
     this->setSwapAbleStatus(false);
@@ -35,7 +36,7 @@ FormType Form::getFormType()
     return this->type;
 }
 
-FormSwapAble::FormSwapAble(unsigned short int length, unsigned short int width, char * banding)
+FormSwapAble::FormSwapAble(unsigned short int length, unsigned short int width, char * banding = StringConverter::strToChar("0000"))
     : Form(length, width, banding)
 {
     this->setSwapAbleStatus(true);

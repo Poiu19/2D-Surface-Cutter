@@ -3,6 +3,7 @@
 #include <iostream>
 #include <iterator>
 #include <algorithm>
+#include "step.hpp"
 #include "form/form.hpp"
 #include "form/formsetup.hpp"
 #include "form/formsorter.hpp"
@@ -57,30 +58,6 @@ int main()
     {
         std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
     }
-    Sorter::sortBySizeWidth(forms);
-    std::cout << "Sortowanie SizeWidth" << std::endl;
-    for (std::shared_ptr<Form> form : forms)
-    {
-        std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
-    }
-    Sorter::sortByLengthWidth(forms);
-    std::cout << "Sortowanie LengthWidth" << std::endl;
-    for (std::shared_ptr<Form> form : forms)
-    {
-        std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
-    }
-    Sorter::sortByWidthLength(forms);
-    std::cout << "Sortowanie WidthLength" << std::endl;
-    for (std::shared_ptr<Form> form : forms)
-    {
-        std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
-    }
-    Sorter::sortByLengthWidth(surfaces);
-    for (std::shared_ptr<Surface> surface : surfaces)
-    {
-        std::cout << "X: " << surface->getPosX() << ", Y: " << surface->getPosY() << ", LENGTH: " << surface->getLength() << ", WIDTH: " << surface->getWidth() << std::endl;
-    }
-    std::cout << SawConfig::getDoubleThickQuantion() << std::endl << SawConfig::getEdgeQuantion() << std::endl << SawConfig::getSawThick() << std::endl;
-    std::cout << FlagDecryptor::getFlagQueuePlace(FLAG_NOTSWAPED) << " - " << FlagDecryptor::isStepFlagAssigned(FLAG_NOTSWAPED, 13) << std::endl;
+
     return 0;
 }

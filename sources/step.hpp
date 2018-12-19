@@ -2,9 +2,9 @@
 #define STEP_HPP_INCLUDED
 #include <algorithm>
 #include <vector>
-#include "form/form.hpp"
 #include "form/surface.hpp"
 #include "stepparams.hpp"
+#include "form/form.hpp"
 class Step {
 	protected: Step * parentStep;
     public: std::vector<Step*> childSteps;

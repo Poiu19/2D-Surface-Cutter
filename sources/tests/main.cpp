@@ -7,3 +7,4 @@
 #include "stepTest.hpp"
 #include "stepparamsTest.hpp"
 #include "cuttingprocessTest.hpp"
+#include "generalconvertersTest.hpp"

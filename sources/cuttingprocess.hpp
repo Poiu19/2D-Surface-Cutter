@@ -26,8 +26,9 @@ class CuttingResult {
 			float getUnusedArea();
 };
 
-class CuttingProcess {
-public: CuttingProcess();
-};
+/*class CuttingProcess {
+	CuttingProcess();
+	public: std::vector<CuttingResult> results;
+};*/
 
 #endif

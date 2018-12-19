@@ -105,6 +105,9 @@
     <ClCompile Include="sources\tests\cuttingprocessTest.cpp">
       <Filter>Tests</Filter>
     </ClCompile>
+    <ClCompile Include="sources\tests\generalconvertersTest.cpp">
+      <Filter>Tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="sources\dimension.hpp">
@@ -168,6 +171,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="sources\tests\cuttingprocessTest.hpp">
+      <Filter>Tests</Filter>
+    </ClInclude>
+    <ClInclude Include="sources\tests\generalconvertersTest.hpp">
       <Filter>Tests</Filter>
     </ClInclude>
   </ItemGroup>

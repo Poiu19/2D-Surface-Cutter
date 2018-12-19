@@ -1,4 +1,6 @@
 #include <string>
+#include "generalconverters.hpp"
+#include "step.hpp"
 #include "form/form.hpp"
 char * StringConverter::strToChar(std::string str)
 {
@@ -50,4 +52,18 @@ bool FlagDecryptor::isStepFlagAssigned(FlagStepType flag, int flags) //giving pl
     flags /= divider;
     bool isAssigned = flags % 2;
     return isAssigned;
+}
+
+std::string ChainConnector::getChain(Step * lastStep)
+{
+	std::string result = "";
+	while (lastStep != nullptr)
+	{
+		if (lastStep->params != nullptr)
+		{
+			result = lastStep->params->getString() + result;
+			lastStep = lastStep->getParentStep();
+		}
+	}
+	return result;
 }
