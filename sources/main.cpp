@@ -10,8 +10,12 @@
 #include "saw/sawconfig.hpp"
 #include "generalconverters.hpp"
 #include "algorithms/sorting.hpp"
+#include "cuttingprocess.hpp"
+#include <thread>
+#include <future>
 int main()
 {
+	SawConfig::loadParams();
     std::vector<std::shared_ptr<Form> > forms;
     std::shared_ptr<Form> form1(new Form(200, 100, StringConverter::strToChar("1111")));
     std::shared_ptr<FormSwapAble> form2(new FormSwapAble(1000, 2000, StringConverter::strToChar("1111")));
@@ -28,9 +32,8 @@ int main()
     forms.push_back(form6);
     forms.push_back(form7);
     FormSetup::setupAllForms(forms);
-    Sorter::sortBySizeLength(forms);
     std::vector<std::shared_ptr<Surface> > surfaces;
-    std::shared_ptr<Surface> surface1(new Surface(0, 0, 200, 400));
+    std::shared_ptr<Surface> surface1(new Surface(0, 0, 2800, 2100));
     std::shared_ptr<Surface> surface2(new Surface(1, 2, 200, 300));
     std::shared_ptr<Surface> surface3(new Surface(5, 3, 300, 300));
     std::shared_ptr<Surface> surface4(new Surface(3, 4, 250, 400));
@@ -43,21 +46,21 @@ int main()
     surfaces.push_back(surface4);
     surfaces.push_back(surface5);
     surfaces.push_back(surface6);
-	Sorter::sortBySizeLength(surfaces);
-	
-	for (std::shared_ptr<Surface> surface : surfaces)
-		std::cout << surface->getPosX() << ", " << surface->getPosY() << ", size: " << surface->getSizeArea() << ", L: " << surface->getLength() << ", W: " << surface->getWidth() << "\n";
 
 	SurfaceSorter::insertIntoCorrectPlaceBySizeLength(surfaces, surface7);
-	std::cout << std::endl;
+	std::shared_ptr<CuttingProcess> sizeLengthProcess(new CuttingProcess(forms, surfaces, SORT_MODE_SIZE_LENGTH));
+	std::thread future(&CuttingProcess::execute, sizeLengthProcess);
+	future.join();
+	sizeLengthProcess->stepPosition->availableSurfaces.pop_back();
+	for (std::shared_ptr<Surface> surface : sizeLengthProcess->stepPosition->availableSurfaces)
+	{
+		std::cout << surface->getPosX() << ", " << surface->getPosY() << ", size: " << surface->getSizeArea() << ", L: " << surface->getLength() << ", W: " << surface->getWidth() << "\n";
+	}
+	std::cout << "\n";
 	for (std::shared_ptr<Surface> surface : surfaces)
 		std::cout << surface->getPosX() << ", " << surface->getPosY() << ", size: " << surface->getSizeArea() << ", L: " << surface->getLength() << ", W: " << surface->getWidth() << "\n";
 
-    std::cout << "Sortowanie SizeLength" << std::endl;
-    for (std::shared_ptr<Form> form : forms)
-    {
-        std::cout << "ID: " << form->getID() << ", size: " << form->getSizeArea() << ", L: " << form->getLength() << ", W: " << form->getWidth() << std::endl;
-    }
+	std::cout << sizeLengthProcess->results.front().getSequenceChain() << std::endl;
 
     return 0;
 }

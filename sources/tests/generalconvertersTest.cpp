@@ -18,6 +18,11 @@ ChainConnectorTest::ChainConnectorTest()
 	lastStep->setParams(5, 2, CUT_HORIZONTAL, true);
 }
 
+ChainConnectorTest::~ChainConnectorTest()
+{
+	delete this->firstStep;
+}
+
 bool ChainConnectorTest::checkChain()
 {
 	std::string chain = ChainConnector::getChain(lastStep);

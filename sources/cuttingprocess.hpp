@@ -1,6 +1,7 @@
 #ifndef CUTTINGPROCESS_HPP_INCLUDED
 #define CUTTINGPROCESS_HPP_INCLUDED
 #include <vector>
+#include "headers.hpp"
 #include "step.hpp"
 
 class CuttingResult {
@@ -26,9 +27,15 @@ class CuttingResult {
 			float getUnusedArea();
 };
 
-/*class CuttingProcess {
-	CuttingProcess();
-	public: std::vector<CuttingResult> results;
-};*/
+class CuttingProcess {
+	public: CuttingProcess(std::vector<std::shared_ptr<Form> > forms, std::vector<std::shared_ptr<Surface> > surfaces, SortMode sortMode);
+			bool execute();
+			std::vector<CuttingResult> results;
+			SortMode getSortMode();
+			void setSortMode(SortMode sortMode);
+			Step * stepPosition = nullptr;
+	private: SortMode sortMode;
+			 void sortPlatesAndSurfaces();
+};
 
 #endif

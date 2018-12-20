@@ -9,12 +9,13 @@ class Step {
 	protected: Step * parentStep;
     public: std::vector<Step*> childSteps;
 			StepParams * params = nullptr;
-    protected:	std::vector<Form*> availableForms;
-				std::vector<Form*> usedForms;
-				std::vector<Surface*> availableSurfaces;
-				std::vector<Surface*> usedSurfaces;
-    public: Step(Step * parentStep = nullptr);
+			std::vector<std::shared_ptr<Form> > availableForms;
+			std::vector<std::shared_ptr<Form> > usedForms;
+			std::vector<std::shared_ptr<Surface> > availableSurfaces;
+			std::vector<std::shared_ptr<Surface> > usedSurfaces;
+			Step(Step * parentStep = nullptr);
 			~Step();
+			int childCheckingNow = 0;
     //creators
 			Step * addChildStep();
 
